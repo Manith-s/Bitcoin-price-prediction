@@ -35,4 +35,4 @@ catboost_info/
 # data/raw/
 
 # Specific packages
-numpy-*.whl
+numpy-*.whl"results/" 
