@@ -1,0 +1,889 @@
+2025-05-03 20:27:55,675 - bitcoin_prediction - INFO - Running full Bitcoin price prediction pipeline...
+2025-05-03 20:27:55,675 - bitcoin_prediction - INFO - Running data collection pipeline...
+2025-05-03 20:27:55,675 - bitcoin_prediction - WARNING - File C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv does not exist
+2025-05-03 20:27:55,675 - bitcoin_prediction - INFO - Fetching data from Binance...
+2025-05-03 20:27:55,892 - bitcoin_prediction - ERROR - Error fetching data from Binance: APIError(code=0): Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.
+2025-05-03 20:27:55,908 - bitcoin_prediction - INFO - Fetching data from binance using CCXT...
+2025-05-03 20:27:55,934 - bitcoin_prediction - INFO - Fetching data from 2015-01-01 00:00:00
+2025-05-03 20:27:56,013 - bitcoin_prediction - ERROR - Error fetching data from binance: binance GET https://api.binance.com/api/v3/exchangeInfo 451  {
+  "code": 0,
+  "msg": "Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error."
+}
+2025-05-03 20:27:56,015 - bitcoin_prediction - INFO - Fetching data from CryptoCompare...
+2025-05-03 20:27:59,933 - bitcoin_prediction - INFO - Successfully fetched 4002 records from CryptoCompare
+2025-05-03 20:27:59,933 - bitcoin_prediction - INFO - Successfully fetched data from cryptocompare
+2025-05-03 20:27:59,966 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-03 20:27:59,966 - bitcoin_prediction - INFO - Data collection completed
+2025-05-03 20:27:59,966 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-03 20:27:59,966 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-03 20:28:00,246 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-03 20:28:00,246 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-03 20:28:00,246 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-03 20:28:00,255 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-03 20:28:00,267 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-03 20:28:00,270 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-03 20:28:00,271 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-03 20:28:00,272 - bitcoin_prediction - INFO - Adding date features...
+2025-05-03 20:28:00,284 - bitcoin_prediction - INFO - Date features added
+2025-05-03 20:28:00,284 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-03 20:28:00,291 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-03 20:28:00,291 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-03 20:28:00,341 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-03 20:28:00,341 - bitcoin_prediction - INFO - Adding return features...
+2025-05-03 20:28:00,349 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-03 20:28:00,349 - bitcoin_prediction - INFO - Removing rows with NaN values...
+2025-05-03 20:28:00,359 - bitcoin_prediction - INFO - Removed 4002 rows with NaN values
+2025-05-03 20:28:00,362 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-03 20:28:00,362 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-03 20:28:00,362 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-03 20:28:00,363 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-03 20:28:00,363 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-03 20:28:00,385 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-03 20:28:00,385 - bitcoin_prediction - INFO - Adding technical indicators...
+2025-05-03 20:28:00,385 - bitcoin_prediction - ERROR - Error in feature engineering: 'NoneType' object is not subscriptable
+2025-05-03 20:28:00,385 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-03 20:28:00,385 - bitcoin_prediction - ERROR - Feature engineering failed
+2025-05-03 20:33:22,087 - bitcoin_prediction - INFO - Running data collection pipeline...
+2025-05-03 20:33:22,121 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-03 20:33:22,121 - bitcoin_prediction - INFO - Data collection completed
+2025-05-03 20:34:07,110 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-03 20:34:07,110 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-03 20:34:07,125 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-03 20:34:07,125 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-03 20:34:07,138 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-03 20:34:07,143 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-03 20:34:07,155 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-03 20:34:07,157 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-03 20:34:07,159 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-03 20:34:07,160 - bitcoin_prediction - INFO - Adding date features...
+2025-05-03 20:34:07,171 - bitcoin_prediction - INFO - Date features added
+2025-05-03 20:34:07,171 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-03 20:34:07,180 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-03 20:34:07,180 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-03 20:34:07,229 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-03 20:34:07,230 - bitcoin_prediction - INFO - Adding return features...
+2025-05-03 20:34:07,240 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-03 20:34:07,240 - bitcoin_prediction - INFO - Handling rows with NaN values...
+2025-05-03 20:34:07,463 - bitcoin_prediction - INFO - Removed 0 rows with NaN values in essential columns
+2025-05-03 20:34:07,880 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-03 20:34:07,880 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-03 20:34:07,880 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-03 20:34:34,017 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-03 20:34:34,017 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-03 20:34:34,108 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-03 20:34:34,108 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-03 20:34:34,144 - bitcoin_prediction - ERROR - Error in feature engineering: tuple indices must be integers or slices, not str
+2025-05-03 20:34:34,151 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-03 20:35:12,359 - bitcoin_prediction - INFO - Running full Bitcoin price prediction pipeline...
+2025-05-03 20:35:12,359 - bitcoin_prediction - INFO - Running data collection pipeline...
+2025-05-03 20:35:12,376 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-03 20:35:12,377 - bitcoin_prediction - INFO - Data collection completed
+2025-05-03 20:35:12,378 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-03 20:35:12,378 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-03 20:35:12,387 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-03 20:35:12,387 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-03 20:35:12,389 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-03 20:35:12,391 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-03 20:35:12,393 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-03 20:35:12,401 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-03 20:35:12,402 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-03 20:35:12,402 - bitcoin_prediction - INFO - Adding date features...
+2025-05-03 20:35:12,411 - bitcoin_prediction - INFO - Date features added
+2025-05-03 20:35:12,411 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-03 20:35:12,418 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-03 20:35:12,420 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-03 20:35:12,470 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-03 20:35:12,470 - bitcoin_prediction - INFO - Adding return features...
+2025-05-03 20:35:12,483 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-03 20:35:12,483 - bitcoin_prediction - INFO - Handling rows with NaN values...
+2025-05-03 20:35:12,561 - bitcoin_prediction - INFO - Removed 0 rows with NaN values in essential columns
+2025-05-03 20:35:12,980 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-03 20:35:12,980 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-03 20:35:12,980 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-03 20:35:12,980 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-03 20:35:12,980 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-03 20:35:13,065 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-03 20:35:13,065 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-03 20:35:13,107 - bitcoin_prediction - ERROR - Error in feature engineering: tuple indices must be integers or slices, not str
+2025-05-03 20:35:13,108 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-03 20:35:13,109 - bitcoin_prediction - ERROR - Feature engineering failed
+2025-05-04 13:51:19,327 - bitcoin_prediction - INFO - Running full Bitcoin price prediction pipeline...
+2025-05-04 13:51:19,327 - bitcoin_prediction - INFO - Running data collection pipeline...
+2025-05-04 13:51:19,653 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 13:51:19,668 - bitcoin_prediction - INFO - Data collection completed
+2025-05-04 13:51:19,668 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-04 13:51:19,668 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-04 13:51:19,710 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 13:51:19,712 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-04 13:51:19,714 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-04 13:51:19,730 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-04 13:51:19,758 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-04 13:51:19,758 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-04 13:51:19,764 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-04 13:51:19,764 - bitcoin_prediction - INFO - Adding date features...
+2025-05-04 13:51:19,780 - bitcoin_prediction - INFO - Date features added
+2025-05-04 13:51:19,780 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-04 13:51:19,789 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-04 13:51:19,789 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-04 13:51:19,855 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-04 13:51:19,855 - bitcoin_prediction - INFO - Adding return features...
+2025-05-04 13:51:19,880 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-04 13:51:19,880 - bitcoin_prediction - INFO - Handling rows with NaN values...
+2025-05-04 13:51:20,617 - bitcoin_prediction - INFO - Removed 0 rows with NaN values in essential columns
+2025-05-04 13:51:21,285 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 13:51:21,285 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 13:51:21,285 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 13:51:21,296 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 13:51:21,296 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 13:51:21,423 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 13:51:21,423 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 13:51:21,543 - bitcoin_prediction - ERROR - Error in feature engineering: tuple indices must be integers or slices, not str
+2025-05-04 13:51:21,543 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 13:51:21,543 - bitcoin_prediction - ERROR - Feature engineering failed
+2025-05-04 13:55:44,324 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-04 13:55:44,325 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-04 13:55:44,328 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 13:55:44,328 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-04 13:55:44,339 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-04 13:55:44,343 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-04 13:55:44,347 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-04 13:55:44,347 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-04 13:55:44,358 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-04 13:55:44,358 - bitcoin_prediction - INFO - Adding date features...
+2025-05-04 13:55:44,364 - bitcoin_prediction - INFO - Date features added
+2025-05-04 13:55:44,370 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-04 13:55:44,378 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-04 13:55:44,378 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-04 13:55:44,436 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-04 13:55:44,436 - bitcoin_prediction - INFO - Adding return features...
+2025-05-04 13:55:44,444 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-04 13:55:44,452 - bitcoin_prediction - INFO - Handling rows with NaN values...
+2025-05-04 13:55:44,511 - bitcoin_prediction - INFO - Removed 0 rows with NaN values in essential columns
+2025-05-04 13:55:45,359 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 13:55:45,361 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 13:55:45,362 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 13:56:03,136 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 13:56:03,136 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 13:56:03,229 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 13:56:03,229 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 13:56:03,262 - bitcoin_prediction - ERROR - Error in feature engineering: tuple indices must be integers or slices, not str
+2025-05-04 13:56:03,263 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 13:56:55,872 - bitcoin_prediction - INFO - Running full Bitcoin price prediction pipeline...
+2025-05-04 13:56:55,872 - bitcoin_prediction - INFO - Running data collection pipeline...
+2025-05-04 13:56:55,884 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 13:56:55,884 - bitcoin_prediction - INFO - Data collection completed
+2025-05-04 13:56:55,884 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-04 13:56:55,886 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-04 13:56:55,899 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 13:56:55,899 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-04 13:56:55,900 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-04 13:56:55,903 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-04 13:56:55,912 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-04 13:56:55,913 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-04 13:56:55,913 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-04 13:56:55,913 - bitcoin_prediction - INFO - Adding date features...
+2025-05-04 13:56:55,920 - bitcoin_prediction - INFO - Date features added
+2025-05-04 13:56:55,926 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-04 13:56:55,928 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-04 13:56:55,928 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-04 13:56:55,985 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-04 13:56:55,985 - bitcoin_prediction - INFO - Adding return features...
+2025-05-04 13:56:56,000 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-04 13:56:56,000 - bitcoin_prediction - INFO - Handling rows with NaN values...
+2025-05-04 13:56:56,062 - bitcoin_prediction - INFO - Removed 0 rows with NaN values in essential columns
+2025-05-04 13:56:56,545 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 13:56:56,545 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 13:56:56,545 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 13:56:56,545 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 13:56:56,545 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 13:56:56,649 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 13:56:56,649 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 13:56:56,684 - bitcoin_prediction - ERROR - Error in feature engineering: tuple indices must be integers or slices, not str
+2025-05-04 13:56:56,692 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 13:56:56,692 - bitcoin_prediction - ERROR - Feature engineering failed
+2025-05-04 14:04:55,835 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 14:04:55,835 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 14:04:55,926 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 14:04:55,926 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 14:04:55,966 - bitcoin_prediction - ERROR - Error in feature engineering: tuple indices must be integers or slices, not str
+2025-05-04 14:04:55,977 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 14:05:14,343 - bitcoin_prediction - INFO - Running full Bitcoin price prediction pipeline...
+2025-05-04 14:05:14,343 - bitcoin_prediction - INFO - Running data collection pipeline...
+2025-05-04 14:05:14,356 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 14:05:14,356 - bitcoin_prediction - INFO - Data collection completed
+2025-05-04 14:05:14,356 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-04 14:05:14,356 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-04 14:05:14,378 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 14:05:14,378 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-04 14:05:14,378 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-04 14:05:14,381 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-04 14:05:14,389 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-04 14:05:14,393 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-04 14:05:14,394 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-04 14:05:14,394 - bitcoin_prediction - INFO - Adding date features...
+2025-05-04 14:05:14,404 - bitcoin_prediction - INFO - Date features added
+2025-05-04 14:05:14,404 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-04 14:05:14,410 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-04 14:05:14,410 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-04 14:05:14,460 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-04 14:05:14,460 - bitcoin_prediction - INFO - Adding return features...
+2025-05-04 14:05:14,477 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-04 14:05:14,478 - bitcoin_prediction - INFO - Handling rows with NaN values...
+2025-05-04 14:05:14,535 - bitcoin_prediction - INFO - Removed 0 rows with NaN values in essential columns
+2025-05-04 14:05:14,944 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 14:05:14,944 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 14:05:14,944 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 14:05:14,944 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 14:05:14,944 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 14:05:15,041 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 14:05:15,041 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 14:05:15,065 - bitcoin_prediction - ERROR - Error in feature engineering: tuple indices must be integers or slices, not str
+2025-05-04 14:05:15,065 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 14:05:15,073 - bitcoin_prediction - ERROR - Feature engineering failed
+2025-05-04 14:11:01,096 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 14:11:01,096 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 14:11:01,187 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 14:11:01,187 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 14:11:01,200 - bitcoin_prediction - INFO - Added RSI indicators
+2025-05-04 14:11:01,203 - bitcoin_prediction - INFO - Added MACD indicators
+2025-05-04 14:11:01,211 - bitcoin_prediction - INFO - Added Bollinger Band indicators
+2025-05-04 14:11:01,225 - bitcoin_prediction - INFO - Added ATR indicators
+2025-05-04 14:11:01,225 - bitcoin_prediction - INFO - Added OBV indicator
+2025-05-04 14:11:01,233 - bitcoin_prediction - WARNING - Ichimoku result has insufficient length: 2
+2025-05-04 14:11:01,233 - bitcoin_prediction - INFO - Added Ichimoku Cloud indicators
+2025-05-04 14:11:01,238 - bitcoin_prediction - INFO - Added ROC indicators
+2025-05-04 14:11:01,242 - bitcoin_prediction - INFO - Added Williams %R indicators
+2025-05-04 14:11:01,287 - bitcoin_prediction - INFO - Added MFI indicators
+2025-05-04 14:11:01,409 - bitcoin_prediction - INFO - Added CCI indicators
+2025-05-04 14:11:01,409 - bitcoin_prediction - INFO - Added technical indicators, new shape: (4002, 154)
+2025-05-04 14:11:01,409 - bitcoin_prediction - INFO - Adding price pattern features...
+2025-05-04 14:11:01,430 - bitcoin_prediction - ERROR - Error in feature engineering: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-05-04 14:11:01,430 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 14:11:24,327 - bitcoin_prediction - INFO - Running full Bitcoin price prediction pipeline...
+2025-05-04 14:11:24,327 - bitcoin_prediction - INFO - Running data collection pipeline...
+2025-05-04 14:11:24,346 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 14:11:24,348 - bitcoin_prediction - INFO - Data collection completed
+2025-05-04 14:11:24,348 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-04 14:11:24,348 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-04 14:11:24,355 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 14:11:24,355 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-04 14:11:24,355 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-04 14:11:24,361 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-04 14:11:24,365 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-04 14:11:24,372 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-04 14:11:24,372 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-04 14:11:24,372 - bitcoin_prediction - INFO - Adding date features...
+2025-05-04 14:11:24,384 - bitcoin_prediction - INFO - Date features added
+2025-05-04 14:11:24,384 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-04 14:11:24,390 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-04 14:11:24,390 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-04 14:11:24,447 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-04 14:11:24,447 - bitcoin_prediction - INFO - Adding return features...
+2025-05-04 14:11:24,465 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-04 14:11:24,465 - bitcoin_prediction - INFO - Handling rows with NaN values...
+2025-05-04 14:11:24,521 - bitcoin_prediction - INFO - Removed 0 rows with NaN values in essential columns
+2025-05-04 14:11:24,993 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 14:11:24,993 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 14:11:24,993 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 14:11:24,993 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 14:11:24,993 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 14:11:25,087 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 14:11:25,087 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 14:11:25,105 - bitcoin_prediction - INFO - Added RSI indicators
+2025-05-04 14:11:25,119 - bitcoin_prediction - INFO - Added MACD indicators
+2025-05-04 14:11:25,132 - bitcoin_prediction - INFO - Added Bollinger Band indicators
+2025-05-04 14:11:25,141 - bitcoin_prediction - INFO - Added ATR indicators
+2025-05-04 14:11:25,147 - bitcoin_prediction - INFO - Added OBV indicator
+2025-05-04 14:11:25,157 - bitcoin_prediction - WARNING - Ichimoku result has insufficient length: 2
+2025-05-04 14:11:25,157 - bitcoin_prediction - INFO - Added Ichimoku Cloud indicators
+2025-05-04 14:11:25,164 - bitcoin_prediction - INFO - Added ROC indicators
+2025-05-04 14:11:25,168 - bitcoin_prediction - INFO - Added Williams %R indicators
+2025-05-04 14:11:25,188 - bitcoin_prediction - INFO - Added MFI indicators
+2025-05-04 14:11:25,325 - bitcoin_prediction - INFO - Added CCI indicators
+2025-05-04 14:11:25,325 - bitcoin_prediction - INFO - Added technical indicators, new shape: (4002, 154)
+2025-05-04 14:11:25,325 - bitcoin_prediction - INFO - Adding price pattern features...
+2025-05-04 14:11:25,347 - bitcoin_prediction - ERROR - Error in feature engineering: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-05-04 14:11:25,352 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 14:11:25,354 - bitcoin_prediction - ERROR - Feature engineering failed
+2025-05-04 16:33:50,000 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 16:33:50,006 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 16:33:50,180 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 16:33:50,180 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 16:33:50,203 - bitcoin_prediction - INFO - Added RSI indicators
+2025-05-04 16:33:50,231 - bitcoin_prediction - INFO - Added MACD indicators
+2025-05-04 16:33:50,236 - bitcoin_prediction - INFO - Added Bollinger Band indicators
+2025-05-04 16:33:50,257 - bitcoin_prediction - INFO - Added ATR indicators
+2025-05-04 16:33:50,262 - bitcoin_prediction - INFO - Added OBV indicator
+2025-05-04 16:33:50,284 - bitcoin_prediction - WARNING - Ichimoku result has insufficient length: 2
+2025-05-04 16:33:50,284 - bitcoin_prediction - INFO - Added Ichimoku Cloud indicators
+2025-05-04 16:33:50,291 - bitcoin_prediction - INFO - Added ROC indicators
+2025-05-04 16:33:50,296 - bitcoin_prediction - INFO - Added Williams %R indicators
+2025-05-04 16:33:50,327 - bitcoin_prediction - INFO - Added MFI indicators
+2025-05-04 16:33:50,479 - bitcoin_prediction - INFO - Added CCI indicators
+2025-05-04 16:33:50,479 - bitcoin_prediction - INFO - Added technical indicators, new shape: (4002, 154)
+2025-05-04 16:33:50,479 - bitcoin_prediction - INFO - Adding price pattern features...
+2025-05-04 16:33:50,502 - bitcoin_prediction - INFO - Added 1 pattern indicators from pandas-ta
+2025-05-04 16:33:50,507 - bitcoin_prediction - INFO - Added Morning Star pattern
+2025-05-04 16:33:50,510 - bitcoin_prediction - INFO - Added Evening Star pattern
+2025-05-04 16:33:50,517 - bitcoin_prediction - INFO - Added Dark Cloud Cover pattern
+2025-05-04 16:33:50,522 - bitcoin_prediction - INFO - Added Piercing pattern
+2025-05-04 16:33:50,529 - bitcoin_prediction - INFO - Added Spinning Top pattern
+2025-05-04 16:33:50,533 - bitcoin_prediction - INFO - Added 6 price pattern features total
+2025-05-04 16:33:50,536 - bitcoin_prediction - INFO - Adding market regime features...
+2025-05-04 16:33:50,577 - bitcoin_prediction - INFO - Added market regime features
+2025-05-04 16:33:50,577 - bitcoin_prediction - INFO - Adding custom features...
+2025-05-04 16:33:50,628 - bitcoin_prediction - INFO - Added custom features
+2025-05-04 16:33:50,628 - bitcoin_prediction - INFO - Adding anomaly detection features...
+2025-05-04 16:33:53,594 - bitcoin_prediction - ERROR - Error adding anomaly detection features: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+2025-05-04 16:33:53,594 - bitcoin_prediction - INFO - Applying dimensionality reduction using pca...
+2025-05-04 16:33:53,623 - bitcoin_prediction - ERROR - Error applying dimensionality reduction: Input X contains NaN.
+PCA does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-05-04 16:33:53,623 - bitcoin_prediction - INFO - Removing rows with NaN values...
+2025-05-04 16:33:53,631 - bitcoin_prediction - INFO - Removed 4002 rows with NaN values
+2025-05-04 16:33:53,637 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv
+2025-05-04 16:33:53,639 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 16:33:53,639 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 16:34:20,050 - bitcoin_prediction - INFO - Running full Bitcoin price prediction pipeline...
+2025-05-04 16:34:20,050 - bitcoin_prediction - INFO - Running data collection pipeline...
+2025-05-04 16:34:20,076 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 16:34:20,076 - bitcoin_prediction - INFO - Data collection completed
+2025-05-04 16:34:20,076 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-04 16:34:20,076 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-04 16:34:20,093 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 16:34:20,093 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-04 16:34:20,098 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-04 16:34:20,099 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-04 16:34:20,110 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-04 16:34:20,118 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-04 16:34:20,121 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-04 16:34:20,122 - bitcoin_prediction - INFO - Adding date features...
+2025-05-04 16:34:20,142 - bitcoin_prediction - INFO - Date features added
+2025-05-04 16:34:20,142 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-04 16:34:20,151 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-04 16:34:20,151 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-04 16:34:20,232 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-04 16:34:20,232 - bitcoin_prediction - INFO - Adding return features...
+2025-05-04 16:34:20,256 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-04 16:34:20,256 - bitcoin_prediction - INFO - Handling rows with NaN values...
+2025-05-04 16:34:20,350 - bitcoin_prediction - INFO - Removed 0 rows with NaN values in essential columns
+2025-05-04 16:34:21,099 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 16:34:21,099 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 16:34:21,099 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 16:34:21,099 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 16:34:21,099 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 16:34:21,307 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 16:34:21,307 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 16:34:21,324 - bitcoin_prediction - INFO - Added RSI indicators
+2025-05-04 16:34:21,332 - bitcoin_prediction - INFO - Added MACD indicators
+2025-05-04 16:34:21,355 - bitcoin_prediction - INFO - Added Bollinger Band indicators
+2025-05-04 16:34:21,375 - bitcoin_prediction - INFO - Added ATR indicators
+2025-05-04 16:34:21,382 - bitcoin_prediction - INFO - Added OBV indicator
+2025-05-04 16:34:21,400 - bitcoin_prediction - WARNING - Ichimoku result has insufficient length: 2
+2025-05-04 16:34:21,402 - bitcoin_prediction - INFO - Added Ichimoku Cloud indicators
+2025-05-04 16:34:21,405 - bitcoin_prediction - INFO - Added ROC indicators
+2025-05-04 16:34:21,418 - bitcoin_prediction - INFO - Added Williams %R indicators
+2025-05-04 16:34:21,457 - bitcoin_prediction - INFO - Added MFI indicators
+2025-05-04 16:34:21,633 - bitcoin_prediction - INFO - Added CCI indicators
+2025-05-04 16:34:21,633 - bitcoin_prediction - INFO - Added technical indicators, new shape: (4002, 154)
+2025-05-04 16:34:21,633 - bitcoin_prediction - INFO - Adding price pattern features...
+2025-05-04 16:34:21,649 - bitcoin_prediction - INFO - Added 1 pattern indicators from pandas-ta
+2025-05-04 16:34:21,653 - bitcoin_prediction - INFO - Added Morning Star pattern
+2025-05-04 16:34:21,656 - bitcoin_prediction - INFO - Added Evening Star pattern
+2025-05-04 16:34:21,659 - bitcoin_prediction - INFO - Added Dark Cloud Cover pattern
+2025-05-04 16:34:21,659 - bitcoin_prediction - INFO - Added Piercing pattern
+2025-05-04 16:34:21,659 - bitcoin_prediction - INFO - Added Spinning Top pattern
+2025-05-04 16:34:21,659 - bitcoin_prediction - INFO - Added 6 price pattern features total
+2025-05-04 16:34:21,668 - bitcoin_prediction - INFO - Adding market regime features...
+2025-05-04 16:34:21,689 - bitcoin_prediction - INFO - Added market regime features
+2025-05-04 16:34:21,689 - bitcoin_prediction - INFO - Adding custom features...
+2025-05-04 16:34:21,730 - bitcoin_prediction - INFO - Added custom features
+2025-05-04 16:34:21,730 - bitcoin_prediction - INFO - Adding anomaly detection features...
+2025-05-04 16:34:23,694 - bitcoin_prediction - ERROR - Error adding anomaly detection features: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+2025-05-04 16:34:23,694 - bitcoin_prediction - INFO - Applying dimensionality reduction using pca...
+2025-05-04 16:34:23,726 - bitcoin_prediction - ERROR - Error applying dimensionality reduction: Input X contains NaN.
+PCA does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+2025-05-04 16:34:23,728 - bitcoin_prediction - INFO - Removing rows with NaN values...
+2025-05-04 16:34:23,734 - bitcoin_prediction - INFO - Removed 4002 rows with NaN values
+2025-05-04 16:34:23,741 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv
+2025-05-04 16:34:23,741 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 16:34:23,743 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 16:34:23,745 - bitcoin_prediction - INFO - Running model training pipeline...
+2025-05-04 16:34:23,745 - bitcoin_prediction - INFO - Training all traditional models...
+2025-05-04 16:34:23,897 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv, shape: (0, 190)
+2025-05-04 16:34:23,897 - bitcoin_prediction - INFO - Preparing data for model training...
+2025-05-04 16:34:23,903 - bitcoin_prediction - ERROR - Error in full pipeline: With n_samples=0, test_size=0.2 and train_size=None, the resulting train set will be empty. Adjust any of the aforementioned parameters.
+2025-05-04 16:40:15,255 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 16:40:15,255 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 16:40:15,459 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 16:40:15,459 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 16:40:15,488 - bitcoin_prediction - INFO - Added RSI indicators
+2025-05-04 16:40:15,512 - bitcoin_prediction - INFO - Added MACD indicators
+2025-05-04 16:40:15,539 - bitcoin_prediction - INFO - Added Bollinger Band indicators
+2025-05-04 16:40:15,554 - bitcoin_prediction - INFO - Added ATR indicators
+2025-05-04 16:40:15,562 - bitcoin_prediction - INFO - Added OBV indicator
+2025-05-04 16:40:15,578 - bitcoin_prediction - WARNING - Ichimoku result has insufficient length: 2
+2025-05-04 16:40:15,578 - bitcoin_prediction - INFO - Added Ichimoku Cloud indicators
+2025-05-04 16:40:15,592 - bitcoin_prediction - INFO - Added ROC indicators
+2025-05-04 16:40:15,598 - bitcoin_prediction - INFO - Added Williams %R indicators
+2025-05-04 16:40:15,637 - bitcoin_prediction - INFO - Added MFI indicators
+2025-05-04 16:40:15,799 - bitcoin_prediction - INFO - Added CCI indicators
+2025-05-04 16:40:15,814 - bitcoin_prediction - INFO - Added technical indicators, new shape: (4002, 154)
+2025-05-04 16:40:15,814 - bitcoin_prediction - INFO - Adding price pattern features...
+2025-05-04 16:40:15,814 - bitcoin_prediction - INFO - Added 1 pattern indicators from pandas-ta
+2025-05-04 16:40:15,830 - bitcoin_prediction - INFO - Added Morning Star pattern
+2025-05-04 16:40:15,831 - bitcoin_prediction - INFO - Added Evening Star pattern
+2025-05-04 16:40:15,835 - bitcoin_prediction - INFO - Added Dark Cloud Cover pattern
+2025-05-04 16:40:15,837 - bitcoin_prediction - INFO - Added Piercing pattern
+2025-05-04 16:40:15,842 - bitcoin_prediction - INFO - Added Spinning Top pattern
+2025-05-04 16:40:15,843 - bitcoin_prediction - INFO - Added 6 price pattern features total
+2025-05-04 16:40:15,843 - bitcoin_prediction - INFO - Adding market regime features...
+2025-05-04 16:40:15,866 - bitcoin_prediction - INFO - Added market regime features
+2025-05-04 16:40:15,869 - bitcoin_prediction - INFO - Adding custom features...
+2025-05-04 16:40:15,904 - bitcoin_prediction - INFO - Added custom features
+2025-05-04 16:40:15,904 - bitcoin_prediction - INFO - Adding anomaly detection features...
+2025-05-04 16:40:19,752 - bitcoin_prediction - INFO - Added anomaly detection features
+2025-05-04 16:40:19,752 - bitcoin_prediction - INFO - Applying dimensionality reduction using pca...
+2025-05-04 16:40:19,787 - bitcoin_prediction - WARNING - Cannot perform dimensionality reduction due to remaining NaN values
+2025-05-04 16:40:19,790 - bitcoin_prediction - INFO - Handling NaN values...
+2025-05-04 16:40:19,838 - bitcoin_prediction - INFO - NaN values handled. Original shape: (4002, 193), NaN count after: 0
+2025-05-04 16:40:20,944 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv
+2025-05-04 16:40:20,944 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 16:40:20,944 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 16:40:46,236 - bitcoin_prediction - INFO - Running full Bitcoin price prediction pipeline...
+2025-05-04 16:40:46,236 - bitcoin_prediction - INFO - Running data collection pipeline...
+2025-05-04 16:40:46,275 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 16:40:46,275 - bitcoin_prediction - INFO - Data collection completed
+2025-05-04 16:40:46,282 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-04 16:40:46,283 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-04 16:40:46,310 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 16:40:46,310 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-04 16:40:46,310 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-04 16:40:46,317 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-04 16:40:46,342 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-04 16:40:46,350 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-04 16:40:46,361 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-04 16:40:46,361 - bitcoin_prediction - INFO - Adding date features...
+2025-05-04 16:40:46,391 - bitcoin_prediction - INFO - Date features added
+2025-05-04 16:40:46,393 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-04 16:40:46,416 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-04 16:40:46,416 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-04 16:40:46,574 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-04 16:40:46,574 - bitcoin_prediction - INFO - Adding return features...
+2025-05-04 16:40:46,624 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-04 16:40:46,624 - bitcoin_prediction - INFO - Handling rows with NaN values...
+2025-05-04 16:40:46,797 - bitcoin_prediction - INFO - Removed 0 rows with NaN values in essential columns
+2025-05-04 16:40:47,535 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 16:40:47,535 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 16:40:47,535 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 16:40:47,535 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 16:40:47,535 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 16:40:47,653 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 16:40:47,653 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 16:40:47,685 - bitcoin_prediction - INFO - Added RSI indicators
+2025-05-04 16:40:47,697 - bitcoin_prediction - INFO - Added MACD indicators
+2025-05-04 16:40:47,716 - bitcoin_prediction - INFO - Added Bollinger Band indicators
+2025-05-04 16:40:47,738 - bitcoin_prediction - INFO - Added ATR indicators
+2025-05-04 16:40:47,739 - bitcoin_prediction - INFO - Added OBV indicator
+2025-05-04 16:40:47,758 - bitcoin_prediction - WARNING - Ichimoku result has insufficient length: 2
+2025-05-04 16:40:47,758 - bitcoin_prediction - INFO - Added Ichimoku Cloud indicators
+2025-05-04 16:40:47,767 - bitcoin_prediction - INFO - Added ROC indicators
+2025-05-04 16:40:47,772 - bitcoin_prediction - INFO - Added Williams %R indicators
+2025-05-04 16:40:47,818 - bitcoin_prediction - INFO - Added MFI indicators
+2025-05-04 16:40:48,085 - bitcoin_prediction - INFO - Added CCI indicators
+2025-05-04 16:40:48,085 - bitcoin_prediction - INFO - Added technical indicators, new shape: (4002, 154)
+2025-05-04 16:40:48,085 - bitcoin_prediction - INFO - Adding price pattern features...
+2025-05-04 16:40:48,113 - bitcoin_prediction - INFO - Added 1 pattern indicators from pandas-ta
+2025-05-04 16:40:48,125 - bitcoin_prediction - INFO - Added Morning Star pattern
+2025-05-04 16:40:48,132 - bitcoin_prediction - INFO - Added Evening Star pattern
+2025-05-04 16:40:48,141 - bitcoin_prediction - INFO - Added Dark Cloud Cover pattern
+2025-05-04 16:40:48,147 - bitcoin_prediction - INFO - Added Piercing pattern
+2025-05-04 16:40:48,155 - bitcoin_prediction - INFO - Added Spinning Top pattern
+2025-05-04 16:40:48,157 - bitcoin_prediction - INFO - Added 6 price pattern features total
+2025-05-04 16:40:48,158 - bitcoin_prediction - INFO - Adding market regime features...
+2025-05-04 16:40:48,262 - bitcoin_prediction - INFO - Added market regime features
+2025-05-04 16:40:48,270 - bitcoin_prediction - INFO - Adding custom features...
+2025-05-04 16:40:48,345 - bitcoin_prediction - INFO - Added custom features
+2025-05-04 16:40:48,345 - bitcoin_prediction - INFO - Adding anomaly detection features...
+2025-05-04 16:40:50,885 - bitcoin_prediction - INFO - Added anomaly detection features
+2025-05-04 16:40:50,885 - bitcoin_prediction - INFO - Applying dimensionality reduction using pca...
+2025-05-04 16:40:50,925 - bitcoin_prediction - WARNING - Cannot perform dimensionality reduction due to remaining NaN values
+2025-05-04 16:40:50,925 - bitcoin_prediction - INFO - Handling NaN values...
+2025-05-04 16:40:50,985 - bitcoin_prediction - INFO - NaN values handled. Original shape: (4002, 193), NaN count after: 0
+2025-05-04 16:40:51,689 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv
+2025-05-04 16:40:51,689 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 16:40:51,689 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 16:40:51,689 - bitcoin_prediction - INFO - Running model training pipeline...
+2025-05-04 16:40:51,689 - bitcoin_prediction - INFO - Training all traditional models...
+2025-05-04 16:40:51,844 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv, shape: (4002, 193)
+2025-05-04 16:40:51,844 - bitcoin_prediction - INFO - Preparing data for model training...
+2025-05-04 16:40:51,865 - bitcoin_prediction - INFO - Training set shape: (2800, 192)
+2025-05-04 16:40:51,865 - bitcoin_prediction - INFO - Validation set shape: (401, 192)
+2025-05-04 16:40:51,865 - bitcoin_prediction - INFO - Test set shape: (801, 192)
+2025-05-04 16:40:51,867 - bitcoin_prediction - INFO - Training Random Forest model...
+2025-05-04 16:40:57,295 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\random_forest.pkl
+2025-05-04 16:40:57,311 - bitcoin_prediction - INFO - Random Forest model trained, test RMSE: 13854.3137
+2025-05-04 16:40:57,311 - bitcoin_prediction - INFO - Directional Accuracy: 0.6879
+2025-05-04 16:40:57,311 - bitcoin_prediction - INFO - Training Gradient Boosting model...
+2025-05-04 16:41:27,667 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\gradient_boosting.pkl
+2025-05-04 16:41:27,669 - bitcoin_prediction - INFO - Gradient Boosting model trained, test RMSE: 13748.7020
+2025-05-04 16:41:27,669 - bitcoin_prediction - INFO - Directional Accuracy: 0.7154
+2025-05-04 16:41:27,669 - bitcoin_prediction - INFO - Training XGBoost model...
+2025-05-04 16:41:27,669 - bitcoin_prediction - ERROR - Error training XGBoost model: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-05-04 16:41:27,669 - bitcoin_prediction - INFO - Training LightGBM model...
+2025-05-04 16:41:27,669 - bitcoin_prediction - ERROR - Error training LightGBM model: LGBMRegressor.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2025-05-04 16:41:27,669 - bitcoin_prediction - INFO - Training CatBoost model...
+2025-05-04 16:41:29,331 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\catboost.pkl
+2025-05-04 16:41:29,331 - bitcoin_prediction - INFO - CatBoost model trained, test RMSE: 22927.7369
+2025-05-04 16:41:29,331 - bitcoin_prediction - INFO - Directional Accuracy: 0.6055
+2025-05-04 16:41:29,382 - bitcoin_prediction - INFO - Results saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\traditional_models_results.json
+2025-05-04 16:41:29,389 - bitcoin_prediction - INFO - All traditional models trained successfully
+2025-05-04 16:41:29,389 - bitcoin_prediction - INFO - Generating visualizations for traditional models...
+2025-05-04 16:41:32,756 - bitcoin_prediction - INFO - Feature importance plot saved to results\feature_importance_RandomForest.png
+2025-05-04 16:41:32,947 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_RandomForest.png
+2025-05-04 16:41:33,158 - bitcoin_prediction - INFO - Plot saved to results\confusion_matrix_RandomForest.png
+2025-05-04 16:41:33,475 - bitcoin_prediction - INFO - Feature importance plot saved to results\feature_importance_GradientBoosting.png
+2025-05-04 16:41:33,707 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_GradientBoosting.png
+2025-05-04 16:41:34,187 - bitcoin_prediction - INFO - Plot saved to results\confusion_matrix_GradientBoosting.png
+2025-05-04 16:41:34,625 - bitcoin_prediction - INFO - Feature importance plot saved to results\feature_importance_CatBoost.png
+2025-05-04 16:41:34,832 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_CatBoost.png
+2025-05-04 16:41:35,051 - bitcoin_prediction - INFO - Plot saved to results\confusion_matrix_CatBoost.png
+2025-05-04 16:41:35,067 - bitcoin_prediction - INFO - Visualizations generated successfully
+2025-05-04 16:41:35,077 - bitcoin_prediction - INFO - Training all deep learning models...
+2025-05-04 16:41:35,200 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv, shape: (4002, 193)
+2025-05-04 16:41:35,200 - bitcoin_prediction - INFO - Preparing data for sequence learning...
+2025-05-04 16:41:35,732 - bitcoin_prediction - INFO - Training set shape: (2794, 10, 193)
+2025-05-04 16:41:35,732 - bitcoin_prediction - INFO - Validation set shape: (399, 10, 193)
+2025-05-04 16:41:35,732 - bitcoin_prediction - INFO - Test set shape: (799, 10, 193)
+2025-05-04 16:41:35,732 - bitcoin_prediction - INFO - Training LSTM model...
+2025-05-04 16:42:01,984 - bitcoin_prediction - INFO - LSTM model trained, test RMSE: 0.7528
+2025-05-04 16:42:01,984 - bitcoin_prediction - INFO - Directional Accuracy: 0.4894
+2025-05-04 16:42:01,984 - bitcoin_prediction - INFO - Training GRU model...
+2025-05-04 16:42:23,312 - bitcoin_prediction - INFO - GRU model trained, test RMSE: 0.6437
+2025-05-04 16:42:23,318 - bitcoin_prediction - INFO - Directional Accuracy: 0.4693
+2025-05-04 16:42:23,318 - bitcoin_prediction - INFO - Training Bidirectional LSTM model...
+2025-05-04 16:42:55,553 - bitcoin_prediction - INFO - Bidirectional LSTM model trained, test RMSE: 0.6624
+2025-05-04 16:42:55,553 - bitcoin_prediction - INFO - Directional Accuracy: 0.4681
+2025-05-04 16:42:55,636 - bitcoin_prediction - INFO - Results saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\deep_learning_models_results.json
+2025-05-04 16:42:55,637 - bitcoin_prediction - INFO - All deep learning models trained successfully
+2025-05-04 16:42:55,638 - bitcoin_prediction - INFO - Generating visualizations for deep learning models...
+2025-05-04 16:42:56,140 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_LSTM.png
+2025-05-04 16:42:56,172 - bitcoin_prediction - ERROR - Error in full pipeline: name 'plt' is not defined
+2025-05-04 16:56:47,445 - bitcoin_prediction - INFO - Running full Bitcoin price prediction pipeline...
+2025-05-04 16:56:47,445 - bitcoin_prediction - INFO - Running data collection pipeline...
+2025-05-04 16:56:47,473 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 16:56:47,473 - bitcoin_prediction - INFO - Data collection completed
+2025-05-04 16:56:47,473 - bitcoin_prediction - INFO - Running data preprocessing pipeline...
+2025-05-04 16:56:47,473 - bitcoin_prediction - INFO - Starting data preprocessing...
+2025-05-04 16:56:47,482 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_raw.csv
+2025-05-04 16:56:47,482 - bitcoin_prediction - INFO - Cleaning data...
+2025-05-04 16:56:47,487 - bitcoin_prediction - INFO - Missing values before imputation: 0
+2025-05-04 16:56:47,489 - bitcoin_prediction - INFO - Missing values after imputation: 0
+2025-05-04 16:56:47,497 - bitcoin_prediction - INFO - Found 76 outliers in column volume
+2025-05-04 16:56:47,502 - bitcoin_prediction - INFO - Found 69 outliers in column quote_volume
+2025-05-04 16:56:47,502 - bitcoin_prediction - INFO - Data cleaning completed
+2025-05-04 16:56:47,504 - bitcoin_prediction - INFO - Adding date features...
+2025-05-04 16:56:47,515 - bitcoin_prediction - INFO - Date features added
+2025-05-04 16:56:47,515 - bitcoin_prediction - INFO - Adding lagged features...
+2025-05-04 16:56:47,522 - bitcoin_prediction - INFO - Added 24 lagged features
+2025-05-04 16:56:47,522 - bitcoin_prediction - INFO - Adding rolling features...
+2025-05-04 16:56:47,580 - bitcoin_prediction - INFO - Added 60 rolling features
+2025-05-04 16:56:47,580 - bitcoin_prediction - INFO - Adding return features...
+2025-05-04 16:56:47,599 - bitcoin_prediction - INFO - Added 21 return features
+2025-05-04 16:56:47,600 - bitcoin_prediction - INFO - Handling rows with NaN values...
+2025-05-04 16:56:47,655 - bitcoin_prediction - INFO - Removed 0 rows with NaN values in essential columns
+2025-05-04 16:56:48,146 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 16:56:48,146 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 16:56:48,159 - bitcoin_prediction - INFO - Data preprocessing completed
+2025-05-04 16:56:48,159 - bitcoin_prediction - INFO - Running feature engineering pipeline...
+2025-05-04 16:56:48,159 - bitcoin_prediction - INFO - Starting feature engineering...
+2025-05-04 16:56:48,523 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_processed.csv
+2025-05-04 16:56:48,523 - bitcoin_prediction - INFO - Adding technical indicators... (DataFrame shape: (4002, 124))
+2025-05-04 16:56:48,547 - bitcoin_prediction - INFO - Added RSI indicators
+2025-05-04 16:56:48,555 - bitcoin_prediction - INFO - Added MACD indicators
+2025-05-04 16:56:48,566 - bitcoin_prediction - INFO - Added Bollinger Band indicators
+2025-05-04 16:56:48,578 - bitcoin_prediction - INFO - Added ATR indicators
+2025-05-04 16:56:48,580 - bitcoin_prediction - INFO - Added OBV indicator
+2025-05-04 16:56:48,589 - bitcoin_prediction - WARNING - Ichimoku result has insufficient length: 2
+2025-05-04 16:56:48,589 - bitcoin_prediction - INFO - Added Ichimoku Cloud indicators
+2025-05-04 16:56:48,594 - bitcoin_prediction - INFO - Added ROC indicators
+2025-05-04 16:56:48,600 - bitcoin_prediction - INFO - Added Williams %R indicators
+2025-05-04 16:56:48,622 - bitcoin_prediction - INFO - Added MFI indicators
+2025-05-04 16:56:48,732 - bitcoin_prediction - INFO - Added CCI indicators
+2025-05-04 16:56:48,732 - bitcoin_prediction - INFO - Added technical indicators, new shape: (4002, 154)
+2025-05-04 16:56:48,732 - bitcoin_prediction - INFO - Adding price pattern features...
+2025-05-04 16:56:48,744 - bitcoin_prediction - INFO - Added 1 pattern indicators from pandas-ta
+2025-05-04 16:56:48,747 - bitcoin_prediction - INFO - Added Morning Star pattern
+2025-05-04 16:56:48,750 - bitcoin_prediction - INFO - Added Evening Star pattern
+2025-05-04 16:56:48,750 - bitcoin_prediction - INFO - Added Dark Cloud Cover pattern
+2025-05-04 16:56:48,750 - bitcoin_prediction - INFO - Added Piercing pattern
+2025-05-04 16:56:48,750 - bitcoin_prediction - INFO - Added Spinning Top pattern
+2025-05-04 16:56:48,750 - bitcoin_prediction - INFO - Added 6 price pattern features total
+2025-05-04 16:56:48,750 - bitcoin_prediction - INFO - Adding market regime features...
+2025-05-04 16:56:48,771 - bitcoin_prediction - INFO - Added market regime features
+2025-05-04 16:56:48,771 - bitcoin_prediction - INFO - Adding custom features...
+2025-05-04 16:56:48,805 - bitcoin_prediction - INFO - Added custom features
+2025-05-04 16:56:48,805 - bitcoin_prediction - INFO - Adding anomaly detection features...
+2025-05-04 16:56:51,276 - bitcoin_prediction - INFO - Added anomaly detection features
+2025-05-04 16:56:51,276 - bitcoin_prediction - INFO - Applying dimensionality reduction using pca...
+2025-05-04 16:56:51,306 - bitcoin_prediction - WARNING - Cannot perform dimensionality reduction due to remaining NaN values
+2025-05-04 16:56:51,309 - bitcoin_prediction - INFO - Handling NaN values...
+2025-05-04 16:56:51,351 - bitcoin_prediction - INFO - NaN values handled. Original shape: (4002, 193), NaN count after: 0
+2025-05-04 16:56:52,026 - bitcoin_prediction - INFO - DataFrame saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv
+2025-05-04 16:56:52,026 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 16:56:52,026 - bitcoin_prediction - INFO - Feature engineering completed
+2025-05-04 16:56:52,026 - bitcoin_prediction - INFO - Running model training pipeline...
+2025-05-04 16:56:52,026 - bitcoin_prediction - INFO - Training all traditional models...
+2025-05-04 16:56:52,184 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv, shape: (4002, 193)
+2025-05-04 16:56:52,184 - bitcoin_prediction - INFO - Preparing data for model training...
+2025-05-04 16:56:52,200 - bitcoin_prediction - INFO - Training set shape: (2800, 192)
+2025-05-04 16:56:52,200 - bitcoin_prediction - INFO - Validation set shape: (401, 192)
+2025-05-04 16:56:52,200 - bitcoin_prediction - INFO - Test set shape: (801, 192)
+2025-05-04 16:56:52,211 - bitcoin_prediction - INFO - Training Random Forest model...
+2025-05-04 16:56:57,468 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\random_forest.pkl
+2025-05-04 16:56:57,468 - bitcoin_prediction - INFO - Random Forest model trained, test RMSE: 13854.3137
+2025-05-04 16:56:57,468 - bitcoin_prediction - INFO - Directional Accuracy: 0.6879
+2025-05-04 16:56:57,468 - bitcoin_prediction - INFO - Training Gradient Boosting model...
+2025-05-04 16:57:22,659 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\gradient_boosting.pkl
+2025-05-04 16:57:22,659 - bitcoin_prediction - INFO - Gradient Boosting model trained, test RMSE: 13748.7020
+2025-05-04 16:57:22,659 - bitcoin_prediction - INFO - Directional Accuracy: 0.7154
+2025-05-04 16:57:22,659 - bitcoin_prediction - INFO - Training XGBoost model...
+2025-05-04 16:57:22,659 - bitcoin_prediction - ERROR - Error training XGBoost model: XGBModel.fit() got an unexpected keyword argument 'callbacks'
+2025-05-04 16:57:22,659 - bitcoin_prediction - INFO - Training LightGBM model...
+2025-05-04 16:57:22,659 - bitcoin_prediction - ERROR - Error training LightGBM model: LGBMRegressor.fit() got an unexpected keyword argument 'verbose'
+2025-05-04 16:57:22,659 - bitcoin_prediction - INFO - Training CatBoost model...
+2025-05-04 16:57:24,049 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\catboost.pkl
+2025-05-04 16:57:24,049 - bitcoin_prediction - INFO - CatBoost model trained, test RMSE: 22927.7369
+2025-05-04 16:57:24,049 - bitcoin_prediction - INFO - Directional Accuracy: 0.6055
+2025-05-04 16:57:24,115 - bitcoin_prediction - INFO - Results saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\traditional_models_results.json
+2025-05-04 16:57:24,123 - bitcoin_prediction - INFO - All traditional models trained successfully
+2025-05-04 16:57:24,124 - bitcoin_prediction - INFO - Generating visualizations for traditional models...
+2025-05-04 16:57:24,684 - bitcoin_prediction - INFO - Feature importance plot saved to results\feature_importance_RandomForest.png
+2025-05-04 16:57:24,947 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_RandomForest.png
+2025-05-04 16:57:25,132 - bitcoin_prediction - INFO - Plot saved to results\confusion_matrix_RandomForest.png
+2025-05-04 16:57:25,419 - bitcoin_prediction - INFO - Feature importance plot saved to results\feature_importance_GradientBoosting.png
+2025-05-04 16:57:25,599 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_GradientBoosting.png
+2025-05-04 16:57:26,029 - bitcoin_prediction - INFO - Plot saved to results\confusion_matrix_GradientBoosting.png
+2025-05-04 16:57:26,420 - bitcoin_prediction - INFO - Feature importance plot saved to results\feature_importance_CatBoost.png
+2025-05-04 16:57:26,620 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_CatBoost.png
+2025-05-04 16:57:26,822 - bitcoin_prediction - INFO - Plot saved to results\confusion_matrix_CatBoost.png
+2025-05-04 16:57:26,822 - bitcoin_prediction - INFO - Visualizations generated successfully
+2025-05-04 16:57:26,834 - bitcoin_prediction - INFO - Training all deep learning models...
+2025-05-04 16:57:26,973 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv, shape: (4002, 193)
+2025-05-04 16:57:26,973 - bitcoin_prediction - INFO - Preparing data for sequence learning...
+2025-05-04 16:57:27,281 - bitcoin_prediction - INFO - Training set shape: (2794, 10, 193)
+2025-05-04 16:57:27,281 - bitcoin_prediction - INFO - Validation set shape: (399, 10, 193)
+2025-05-04 16:57:27,281 - bitcoin_prediction - INFO - Test set shape: (799, 10, 193)
+2025-05-04 16:57:27,286 - bitcoin_prediction - INFO - Training LSTM model...
+2025-05-04 16:57:45,818 - bitcoin_prediction - INFO - LSTM model trained, test RMSE: 0.7293
+2025-05-04 16:57:45,818 - bitcoin_prediction - INFO - Directional Accuracy: 0.4831
+2025-05-04 16:57:45,818 - bitcoin_prediction - INFO - Training GRU model...
+2025-05-04 16:58:12,098 - bitcoin_prediction - INFO - GRU model trained, test RMSE: 0.7502
+2025-05-04 16:58:12,098 - bitcoin_prediction - INFO - Directional Accuracy: 0.4568
+2025-05-04 16:58:12,106 - bitcoin_prediction - INFO - Training Bidirectional LSTM model...
+2025-05-04 16:58:45,627 - bitcoin_prediction - INFO - Bidirectional LSTM model trained, test RMSE: 0.6594
+2025-05-04 16:58:45,627 - bitcoin_prediction - INFO - Directional Accuracy: 0.4756
+2025-05-04 16:58:45,840 - bitcoin_prediction - INFO - Results saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\deep_learning_models_results.json
+2025-05-04 16:58:45,869 - bitcoin_prediction - INFO - All deep learning models trained successfully
+2025-05-04 16:58:45,870 - bitcoin_prediction - INFO - Generating visualizations for deep learning models...
+2025-05-04 16:58:46,365 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_LSTM.png
+2025-05-04 16:58:46,897 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_GRU.png
+2025-05-04 16:58:47,304 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_BidirectionalLSTM.png
+2025-05-04 16:58:47,542 - bitcoin_prediction - INFO - Visualizations generated successfully
+2025-05-04 16:58:47,553 - bitcoin_prediction - INFO - Training all ensemble models...
+2025-05-04 16:58:47,780 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv, shape: (4002, 193)
+2025-05-04 16:58:47,780 - bitcoin_prediction - INFO - Preparing data for model training...
+2025-05-04 16:58:47,780 - bitcoin_prediction - INFO - Training set shape: (2800, 192)
+2025-05-04 16:58:47,780 - bitcoin_prediction - INFO - Validation set shape: (401, 192)
+2025-05-04 16:58:47,780 - bitcoin_prediction - INFO - Test set shape: (801, 192)
+2025-05-04 16:58:47,791 - bitcoin_prediction - INFO - Training voting ensemble model...
+2025-05-04 16:58:47,792 - bitcoin_prediction - INFO - Loading or training base models for ensemble...
+2025-05-04 16:58:47,905 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv, shape: (4002, 193)
+2025-05-04 16:58:47,905 - bitcoin_prediction - INFO - Preparing data for model training...
+2025-05-04 16:58:47,905 - bitcoin_prediction - INFO - Training set shape: (2800, 192)
+2025-05-04 16:58:47,905 - bitcoin_prediction - INFO - Validation set shape: (401, 192)
+2025-05-04 16:58:47,905 - bitcoin_prediction - INFO - Test set shape: (801, 192)
+2025-05-04 16:58:47,922 - bitcoin_prediction - ERROR - Model file not found: C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\randomforest.pkl
+2025-05-04 16:58:47,923 - bitcoin_prediction - INFO - Training RandomForest model...
+2025-05-04 16:58:47,923 - bitcoin_prediction - INFO - Training Random Forest model...
+2025-05-04 16:58:53,127 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\random_forest.pkl
+2025-05-04 16:58:53,127 - bitcoin_prediction - INFO - Random Forest model trained, test RMSE: 13854.3137
+2025-05-04 16:58:53,127 - bitcoin_prediction - INFO - Directional Accuracy: 0.6879
+2025-05-04 16:58:53,127 - bitcoin_prediction - ERROR - Model file not found: C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\gradientboosting.pkl
+2025-05-04 16:58:53,127 - bitcoin_prediction - INFO - Training GradientBoosting model...
+2025-05-04 16:58:53,127 - bitcoin_prediction - INFO - Training Gradient Boosting model...
+2025-05-04 16:59:18,832 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\gradient_boosting.pkl
+2025-05-04 16:59:18,832 - bitcoin_prediction - INFO - Gradient Boosting model trained, test RMSE: 13748.7020
+2025-05-04 16:59:18,832 - bitcoin_prediction - INFO - Directional Accuracy: 0.7154
+2025-05-04 16:59:18,832 - bitcoin_prediction - ERROR - Model file not found: C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\xgboost.pkl
+2025-05-04 16:59:18,832 - bitcoin_prediction - INFO - Training XGBoost model...
+2025-05-04 16:59:18,832 - bitcoin_prediction - INFO - Training XGBoost model...
+2025-05-04 16:59:18,832 - bitcoin_prediction - ERROR - Error training XGBoost model: XGBModel.fit() got an unexpected keyword argument 'callbacks'
+2025-05-04 16:59:18,832 - bitcoin_prediction - ERROR - Model file not found: C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\lightgbm.pkl
+2025-05-04 16:59:18,832 - bitcoin_prediction - INFO - Training LightGBM model...
+2025-05-04 16:59:18,832 - bitcoin_prediction - INFO - Training LightGBM model...
+2025-05-04 16:59:18,832 - bitcoin_prediction - ERROR - Error training LightGBM model: LGBMRegressor.fit() got an unexpected keyword argument 'verbose'
+2025-05-04 16:59:19,104 - bitcoin_prediction - INFO - Model loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\catboost.pkl
+2025-05-04 16:59:19,104 - bitcoin_prediction - INFO - Loaded 3 base models for ensemble
+2025-05-04 16:59:55,508 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\voting_ensemble.pkl
+2025-05-04 16:59:55,508 - bitcoin_prediction - INFO - Voting ensemble model trained, test RMSE: 14496.4162
+2025-05-04 16:59:55,508 - bitcoin_prediction - INFO - Directional Accuracy: 0.7778
+2025-05-04 16:59:55,508 - bitcoin_prediction - INFO - Training stacking ensemble model...
+2025-05-04 16:59:55,508 - bitcoin_prediction - INFO - Loading or training base models for ensemble...
+2025-05-04 16:59:55,856 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv, shape: (4002, 193)
+2025-05-04 16:59:55,856 - bitcoin_prediction - INFO - Preparing data for model training...
+2025-05-04 16:59:55,880 - bitcoin_prediction - INFO - Training set shape: (2800, 192)
+2025-05-04 16:59:55,881 - bitcoin_prediction - INFO - Validation set shape: (401, 192)
+2025-05-04 16:59:55,881 - bitcoin_prediction - INFO - Test set shape: (801, 192)
+2025-05-04 16:59:55,885 - bitcoin_prediction - ERROR - Model file not found: C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\xgboost.pkl
+2025-05-04 16:59:55,885 - bitcoin_prediction - INFO - Training XGBoost model...
+2025-05-04 16:59:55,889 - bitcoin_prediction - INFO - Training XGBoost model...
+2025-05-04 16:59:55,890 - bitcoin_prediction - ERROR - Error training XGBoost model: XGBModel.fit() got an unexpected keyword argument 'callbacks'
+2025-05-04 16:59:55,890 - bitcoin_prediction - ERROR - Model file not found: C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\lightgbm.pkl
+2025-05-04 16:59:55,890 - bitcoin_prediction - INFO - Training LightGBM model...
+2025-05-04 16:59:55,890 - bitcoin_prediction - INFO - Training LightGBM model...
+2025-05-04 16:59:55,890 - bitcoin_prediction - ERROR - Error training LightGBM model: LGBMRegressor.fit() got an unexpected keyword argument 'verbose'
+2025-05-04 16:59:55,890 - bitcoin_prediction - INFO - Loaded 3 base models for ensemble
+2025-05-04 17:02:44,989 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\stacking_ensemble.pkl
+2025-05-04 17:02:44,989 - bitcoin_prediction - INFO - Stacking ensemble model trained, test RMSE: 18308.7705
+2025-05-04 17:02:44,989 - bitcoin_prediction - INFO - Directional Accuracy: 0.3983
+2025-05-04 17:02:44,989 - bitcoin_prediction - INFO - Training custom blending ensemble model...
+2025-05-04 17:02:45,004 - bitcoin_prediction - INFO - Loading or training base models for ensemble...
+2025-05-04 17:02:45,181 - bitcoin_prediction - INFO - Data loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv, shape: (4002, 193)
+2025-05-04 17:02:45,181 - bitcoin_prediction - INFO - Preparing data for model training...
+2025-05-04 17:02:45,181 - bitcoin_prediction - INFO - Training set shape: (2800, 192)
+2025-05-04 17:02:45,181 - bitcoin_prediction - INFO - Validation set shape: (401, 192)
+2025-05-04 17:02:45,181 - bitcoin_prediction - INFO - Test set shape: (801, 192)
+2025-05-04 17:02:45,192 - bitcoin_prediction - ERROR - Model file not found: C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\xgboost.pkl
+2025-05-04 17:02:45,192 - bitcoin_prediction - INFO - Training XGBoost model...
+2025-05-04 17:02:45,192 - bitcoin_prediction - INFO - Training XGBoost model...
+2025-05-04 17:02:45,192 - bitcoin_prediction - ERROR - Error training XGBoost model: XGBModel.fit() got an unexpected keyword argument 'callbacks'
+2025-05-04 17:02:45,192 - bitcoin_prediction - ERROR - Model file not found: C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\lightgbm.pkl
+2025-05-04 17:02:45,192 - bitcoin_prediction - INFO - Training LightGBM model...
+2025-05-04 17:02:45,192 - bitcoin_prediction - INFO - Training LightGBM model...
+2025-05-04 17:02:45,192 - bitcoin_prediction - ERROR - Error training LightGBM model: LGBMRegressor.fit() got an unexpected keyword argument 'verbose'
+2025-05-04 17:02:45,192 - bitcoin_prediction - INFO - Loaded 3 base models for ensemble
+2025-05-04 17:02:45,442 - bitcoin_prediction - INFO - Model saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\models\blending_ensemble.pkl
+2025-05-04 17:02:45,442 - bitcoin_prediction - INFO - Blending ensemble model trained, test RMSE: 14450.1663
+2025-05-04 17:02:45,442 - bitcoin_prediction - INFO - Directional Accuracy: 0.7266
+2025-05-04 17:02:45,499 - bitcoin_prediction - INFO - Results saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\ensemble_models_results.json
+2025-05-04 17:02:45,499 - bitcoin_prediction - INFO - All ensemble models trained successfully
+2025-05-04 17:02:45,501 - bitcoin_prediction - INFO - Generating visualizations for ensemble models...
+2025-05-04 17:02:45,670 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_VotingEnsemble.png
+2025-05-04 17:02:45,875 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_StackingEnsemble.png
+2025-05-04 17:02:46,066 - bitcoin_prediction - INFO - Plot saved to results\price_prediction_BlendingEnsemble.png
+2025-05-04 17:02:46,236 - bitcoin_prediction - INFO - Visualizations generated successfully
+2025-05-04 17:02:46,252 - bitcoin_prediction - INFO - Model training completed
+2025-05-04 17:02:46,252 - bitcoin_prediction - INFO - Running model evaluation pipeline...
+2025-05-04 17:02:46,252 - bitcoin_prediction - INFO - Running full model evaluation...
+2025-05-04 17:02:46,820 - bitcoin_prediction - INFO - Results loaded for 9 models
+2025-05-04 17:02:46,820 - bitcoin_prediction - INFO - Comparing models based on RMSE...
+2025-05-04 17:02:46,823 - bitcoin_prediction - INFO - Model comparison based on RMSE:
+2025-05-04 17:02:46,823 - bitcoin_prediction - INFO - BidirectionalLSTM: 0.6594
+2025-05-04 17:02:46,825 - bitcoin_prediction - INFO - LSTM: 0.7293
+2025-05-04 17:02:46,825 - bitcoin_prediction - INFO - GRU: 0.7502
+2025-05-04 17:02:46,827 - bitcoin_prediction - INFO - GradientBoosting: 13748.7020
+2025-05-04 17:02:46,829 - bitcoin_prediction - INFO - RandomForest: 13854.3137
+2025-05-04 17:02:46,830 - bitcoin_prediction - INFO - BlendingEnsemble: 14450.1663
+2025-05-04 17:02:46,832 - bitcoin_prediction - INFO - VotingEnsemble: 14496.4162
+2025-05-04 17:02:46,832 - bitcoin_prediction - INFO - StackingEnsemble: 18308.7705
+2025-05-04 17:02:46,834 - bitcoin_prediction - INFO - CatBoost: 22927.7369
+2025-05-04 17:02:46,834 - bitcoin_prediction - INFO - Best model based on RMSE: BidirectionalLSTM
+2025-05-04 17:02:46,834 - bitcoin_prediction - INFO - Comparing models based on Directional Accuracy...
+2025-05-04 17:02:46,834 - bitcoin_prediction - INFO - Model comparison based on Directional Accuracy:
+2025-05-04 17:02:46,839 - bitcoin_prediction - INFO - VotingEnsemble: 0.7778
+2025-05-04 17:02:46,841 - bitcoin_prediction - INFO - BlendingEnsemble: 0.7266
+2025-05-04 17:02:46,841 - bitcoin_prediction - INFO - GradientBoosting: 0.7154
+2025-05-04 17:02:46,843 - bitcoin_prediction - INFO - RandomForest: 0.6879
+2025-05-04 17:02:46,843 - bitcoin_prediction - INFO - CatBoost: 0.6055
+2025-05-04 17:02:46,843 - bitcoin_prediction - INFO - LSTM: 0.4831
+2025-05-04 17:02:46,843 - bitcoin_prediction - INFO - BidirectionalLSTM: 0.4756
+2025-05-04 17:02:46,849 - bitcoin_prediction - INFO - GRU: 0.4568
+2025-05-04 17:02:46,849 - bitcoin_prediction - INFO - StackingEnsemble: 0.3983
+2025-05-04 17:02:46,849 - bitcoin_prediction - INFO - Best model based on Directional Accuracy: VotingEnsemble
+2025-05-04 17:02:46,852 - bitcoin_prediction - INFO - Plotting model comparison for metrics: ['RMSE', 'MAE', 'Directional Accuracy', 'F1 Score']
+2025-05-04 17:02:47,487 - bitcoin_prediction - INFO - Comparison plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\model_comparison.png
+2025-05-04 17:02:47,493 - bitcoin_prediction - INFO - Plotting prediction comparison...
+2025-05-04 17:02:47,493 - bitcoin_prediction - INFO - Comparing models based on RMSE...
+2025-05-04 17:02:47,496 - bitcoin_prediction - INFO - Model comparison based on RMSE:
+2025-05-04 17:02:47,497 - bitcoin_prediction - INFO - BidirectionalLSTM: 0.6594
+2025-05-04 17:02:47,497 - bitcoin_prediction - INFO - LSTM: 0.7293
+2025-05-04 17:02:47,497 - bitcoin_prediction - INFO - GRU: 0.7502
+2025-05-04 17:02:47,497 - bitcoin_prediction - INFO - GradientBoosting: 13748.7020
+2025-05-04 17:02:47,497 - bitcoin_prediction - INFO - RandomForest: 13854.3137
+2025-05-04 17:02:47,497 - bitcoin_prediction - INFO - BlendingEnsemble: 14450.1663
+2025-05-04 17:02:47,497 - bitcoin_prediction - INFO - VotingEnsemble: 14496.4162
+2025-05-04 17:02:47,497 - bitcoin_prediction - INFO - StackingEnsemble: 18308.7705
+2025-05-04 17:02:47,497 - bitcoin_prediction - INFO - CatBoost: 22927.7369
+2025-05-04 17:02:47,497 - bitcoin_prediction - INFO - Best model based on RMSE: BidirectionalLSTM
+2025-05-04 17:02:47,691 - bitcoin_prediction - INFO - Prediction comparison plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\prediction_comparison.png
+2025-05-04 17:02:47,771 - bitcoin_prediction - INFO - Evaluating feature importance...
+2025-05-04 17:02:48,185 - bitcoin_prediction - INFO - Feature importance plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\feature_importance.png
+2025-05-04 17:02:48,185 - bitcoin_prediction - INFO - Evaluating directional accuracy...
+2025-05-04 17:02:49,003 - bitcoin_prediction - INFO - Directional accuracy plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\directional_accuracy.png
+2025-05-04 17:02:49,214 - bitcoin_prediction - INFO - Confusion matrix plot for RandomForest saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\confusion_matrix_RandomForest.png
+2025-05-04 17:02:49,432 - bitcoin_prediction - INFO - Confusion matrix plot for GradientBoosting saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\confusion_matrix_GradientBoosting.png
+2025-05-04 17:02:49,633 - bitcoin_prediction - INFO - Confusion matrix plot for CatBoost saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\confusion_matrix_CatBoost.png
+2025-05-04 17:02:49,814 - bitcoin_prediction - INFO - Confusion matrix plot for LSTM saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\confusion_matrix_LSTM.png
+2025-05-04 17:02:49,986 - bitcoin_prediction - INFO - Confusion matrix plot for GRU saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\confusion_matrix_GRU.png
+2025-05-04 17:02:50,168 - bitcoin_prediction - INFO - Confusion matrix plot for BidirectionalLSTM saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\confusion_matrix_BidirectionalLSTM.png
+2025-05-04 17:02:50,333 - bitcoin_prediction - INFO - Confusion matrix plot for VotingEnsemble saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\confusion_matrix_VotingEnsemble.png
+2025-05-04 17:02:50,521 - bitcoin_prediction - INFO - Confusion matrix plot for StackingEnsemble saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\confusion_matrix_StackingEnsemble.png
+2025-05-04 17:02:50,746 - bitcoin_prediction - INFO - Confusion matrix plot for BlendingEnsemble saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\confusion_matrix_BlendingEnsemble.png
+2025-05-04 17:02:50,755 - bitcoin_prediction - INFO - Creating summary report...
+2025-05-04 17:02:50,755 - bitcoin_prediction - INFO - Comparing models based on RMSE...
+2025-05-04 17:02:50,758 - bitcoin_prediction - INFO - Model comparison based on RMSE:
+2025-05-04 17:02:50,758 - bitcoin_prediction - INFO - BidirectionalLSTM: 0.6594
+2025-05-04 17:02:50,758 - bitcoin_prediction - INFO - LSTM: 0.7293
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - GRU: 0.7502
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - GradientBoosting: 13748.7020
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - RandomForest: 13854.3137
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - BlendingEnsemble: 14450.1663
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - VotingEnsemble: 14496.4162
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - StackingEnsemble: 18308.7705
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - CatBoost: 22927.7369
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - Best model based on RMSE: BidirectionalLSTM
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - Comparing models based on Directional Accuracy...
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - Model comparison based on Directional Accuracy:
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - VotingEnsemble: 0.7778
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - BlendingEnsemble: 0.7266
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - GradientBoosting: 0.7154
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - RandomForest: 0.6879
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - CatBoost: 0.6055
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - LSTM: 0.4831
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - BidirectionalLSTM: 0.4756
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - GRU: 0.4568
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - StackingEnsemble: 0.3983
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - Best model based on Directional Accuracy: VotingEnsemble
+2025-05-04 17:02:50,760 - bitcoin_prediction - INFO - Evaluating feature importance...
+2025-05-04 17:02:51,349 - bitcoin_prediction - INFO - Feature importance plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\feature_importance.png
+2025-05-04 17:02:51,368 - bitcoin_prediction - INFO - Summary report saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\model_evaluation_summary.md
+2025-05-04 17:02:51,375 - bitcoin_prediction - INFO - Evaluation completed
+2025-05-04 17:02:51,375 - bitcoin_prediction - INFO - Model evaluation completed
+2025-05-04 17:02:51,375 - bitcoin_prediction - INFO - Running data visualization pipeline...
+2025-05-04 17:02:51,375 - bitcoin_prediction - INFO - Creating all visualizations...
+2025-05-04 17:02:51,518 - bitcoin_prediction - INFO - DataFrame loaded from C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\data\BTC_USD_1d_featured.csv
+2025-05-04 17:02:51,520 - bitcoin_prediction - INFO - Creating price history plot...
+2025-05-04 17:02:51,685 - bitcoin_prediction - INFO - Price history plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\price_history.png
+2025-05-04 17:02:51,700 - bitcoin_prediction - INFO - Creating price with volume plot...
+2025-05-04 17:02:55,070 - bitcoin_prediction - INFO - Price with volume plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\price_volume.png
+2025-05-04 17:02:55,086 - bitcoin_prediction - INFO - Creating candlestick plot...
+2025-05-04 17:02:58,855 - bitcoin_prediction - INFO - Candlestick plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\candlestick.html
+2025-05-04 17:02:58,855 - bitcoin_prediction - INFO - Creating technical indicators plot...
+2025-05-04 17:02:59,213 - bitcoin_prediction - INFO - Technical indicators plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\technical_indicators.html
+2025-05-04 17:02:59,213 - bitcoin_prediction - INFO - Creating correlation matrix plot...
+2025-05-04 17:02:59,592 - bitcoin_prediction - INFO - Correlation matrix plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\correlation_matrix.png
+2025-05-04 17:02:59,602 - bitcoin_prediction - INFO - Creating feature distributions plot...
+2025-05-04 17:03:01,069 - bitcoin_prediction - INFO - Feature distributions plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\feature_distributions.png
+2025-05-04 17:03:01,069 - bitcoin_prediction - INFO - Creating returns analysis plot...
+2025-05-04 17:03:02,055 - bitcoin_prediction - INFO - Returns analysis plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\returns_analysis.png
+2025-05-04 17:03:02,067 - bitcoin_prediction - INFO - Creating volatility analysis plot...
+2025-05-04 17:03:02,436 - bitcoin_prediction - INFO - Volatility analysis plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\volatility_analysis.png
+2025-05-04 17:03:02,443 - bitcoin_prediction - INFO - Creating seasonality analysis plot...
+2025-05-04 17:03:03,032 - bitcoin_prediction - INFO - Seasonality analysis plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\seasonality_analysis.png
+2025-05-04 17:03:03,032 - bitcoin_prediction - INFO - Creating market regimes plot...
+2025-05-04 17:03:03,561 - bitcoin_prediction - INFO - Market regimes plot saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\market_regimes.png
+2025-05-04 17:03:03,563 - bitcoin_prediction - INFO - Creating interactive dashboard...
+2025-05-04 17:03:03,791 - bitcoin_prediction - INFO - Interactive dashboard saved to C:\Users\shash\Documents\Resume\PersonalProjects\bitcoin_prediction_project\results\bitcoin_dashboard.html
+2025-05-04 17:03:03,793 - bitcoin_prediction - INFO - All visualizations created
+2025-05-04 17:03:03,793 - bitcoin_prediction - INFO - Data visualization completed
+2025-05-04 17:03:03,793 - bitcoin_prediction - INFO - Full pipeline completed successfully

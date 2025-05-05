@@ -1,0 +1,38 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Debug logs but keep main logs
+logs/debug_*.log
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# CatBoost info
+catboost_info/
+
+# Large model files (uncomment if you don't want to include large model files)
+# models/*.h5
+# models/*.pkl
+
+# Large data files (uncomment if you don't want to include large data files)
+# data/*.csv
+# data/raw/
+
+# Specific packages
+numpy-*.whl
